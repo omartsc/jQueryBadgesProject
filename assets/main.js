@@ -8,7 +8,8 @@ $(function() {
             response.courses.completed.forEach(function(course) {
                $('#badges').append('<div class="course">' +
                 '<h3>'+course.title+'</h3>' +
-                '</div>');
+                '<img src="'+course.badge+'" alt="badge">' +
+                   '</div>');
             });
         }
     });
