@@ -5,9 +5,9 @@ $(function() {
         url: "https://www.codeschool.com/users/tapior.json",
         dataType: 'jsonp',
         success: function(response) {
-            response.courses.completed.forEach(function(index,course) {
+            response.courses.completed.forEach(function(course) {
                $('#badges').append('<div class="course">' +
-                '<h3>'+course["title"]+'</h3>' +
+                '<h3>'+course.title+'</h3>' +
                 '</div>');
             });
         }
