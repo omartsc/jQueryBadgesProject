@@ -6,9 +6,9 @@ $(function() {
         dataType: 'jsonp',
         success: function(response) {
             response.courses.completed.forEach(function(index,course) {
-               $('#badges').append("<div class="course">" +
-                "<h3>"+course.title+"</h3>" +
-                "</div>");
+               $('#badges').append('<div class="course">' +
+                '<h3>'+course.title+'</h3>' +
+                '</div>');
             });
         }
     });
