@@ -1,15 +1,13 @@
 $(function() {
 
   // your code will go here
-    $.ajax('https://www.codeschool.com/users/tapior.json', {
+    $.ajax({
+        url: "https://www.codeschool.com/users/tapior.json",
         dataType: 'jsonp',
         success: function(response) {
-            var compCourses = $.map(response.courses.completed,function(index,course) {
-                var item = $('<div class=".course"> </div>');
-                item.append(course);
-                return item;
+            response.courses.completed.forEach(function(index,course) {
+               $('#badges').append('<div class="course">'+course.title+'</div>');
             });
-            $('#badges').appendChild(compCourses);
         }
     });
 });
